@@ -1,0 +1,24 @@
+{"animals" : [{
+    "id_figurina" : 1,
+    "razza_animale" : "Ghedolo",
+    "specie_animale" : "Pidolo",
+    "area_provenienza" : "Pidland",
+    "rischio_estinzione" : true,
+    "image" : "https://i.imgur.com/ub9uK8u.png"
+},{
+    "id_figurina" : 2,
+    "razza_animale" : "Ghindolo",
+    "specie_animale" : "Pidolo",
+    "area_provenienza" : "Picdland",
+    "rischio_estinzione" : true,
+    "image" : "https://i.imgur.com/ub9uK8u.png"
+},
+{
+    "id_figurina" : 3,
+    "razza_animale" : "Godolo",
+    "specie_animale" : "Pidolo",
+    "area_provenienza" : "Piddoland",
+    "rischio_estinzione" : false,
+    "image" : "https://i.imgur.com/ub9uK8u.png"
+}]
+}
