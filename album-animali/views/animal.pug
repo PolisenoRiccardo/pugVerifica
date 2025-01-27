@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charanimal="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Dettagli Animale
+    body
+        header
+            h1= animal.razza_animale
+        main
+            p
+                strong Specie:
+                |  #{animal.specie_animale}
+            p
+                strong Razza:
+                |  #{animal.razza_animale}
+            p
+                strong Area di Provenienza:
+                |  #{animal.area_provenienza}
+            p
+                strong Rischio Estinzione:
+                |  #{animal.rischio_estinzione ? 'Sì' : 'No'}
+            img(src=animal.image, alt=animal.razza_animale)
