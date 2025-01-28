@@ -7,6 +7,9 @@ app.set('view engine', 'pug');
 
 app.use(express.static(__dirname + '/public'));
 
+var cors = require('cors'); //HTTP access control (CORS) for cross origin requests
+app.use(cors());
+
 app.get('/', (req, res) => {
     res.render('index', {
         animaled: animals.animal

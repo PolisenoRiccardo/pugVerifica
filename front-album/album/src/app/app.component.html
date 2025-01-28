@@ -1,1 +1,9 @@
-<div>Risultati: {{results | json}}</div>
+<div *ngFor="let animaled of animali">
+  <div class="animal-card">
+    <h2>{{ animaled.razza_animale }}</h2>
+    <p>Species: {{ animaled.specie_animale }}</p>
+    <p>Area of Origin: {{ animaled.area_provenienza }}</p>
+    <p>Endangered: {{ animaled.rischio_estinzione ? 'Yes' : 'No' }}</p>
+    <img [src]="animaled.image" alt="{{ animaled.razza_animale }}">
+  </div>
+</div>
