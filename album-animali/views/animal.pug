@@ -6,18 +6,25 @@ html(lang="en")
         title Dettagli Animale
     body
         header
-            h1= animal.razza_animale
+            h1= selectedAnimal.razza_animale
+            nav
+                ul  
+                    li 
+                        a(href="/") Home
+                    each animal in animaled
+                        li
+                            a(href=`/api/${animal.id_figurina}`) #{animal.razza_animale}
         main
             p
                 strong Specie:
-                |  #{animal.specie_animale}
+                |  #{selectedAnimal.specie_animale}
             p
                 strong Razza:
-                |  #{animal.razza_animale}
+                |  #{selectedAnimal.razza_animale}
             p
                 strong Area di Provenienza:
-                |  #{animal.area_provenienza}
+                |  #{selectedAnimal.area_provenienza}
             p
                 strong Rischio Estinzione:
-                |  #{animal.rischio_estinzione ? 'Sì' : 'No'}
-            img(src=animal.image, alt=animal.razza_animale)
+                |  #{selectedAnimal.rischio_estinzione ? 'Sì' : 'No'}
+            img(src=selectedAnimal.image, alt=selectedAnimal.razza_animale)

@@ -6,10 +6,13 @@ const app = express();
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', {
+        animaled: animals.animal
+    });
 });
 app.get('/api/album-animali', function (req, res) {
     res.send(animals);
+    
 });
 app.get('/api/:id_figurina', (req, res) => {
     const animalID = req.params.id_figurina;
@@ -17,8 +20,10 @@ app.get('/api/:id_figurina', (req, res) => {
 
     if (animal) {
         res.render('animal', {
-            animal: animal
+            selectedAnimal : animal,
+            animaled: animals.animal
         });
+        console.log(animals.animal);
     } else {
         res.status(404).send('Animal not found');
     }

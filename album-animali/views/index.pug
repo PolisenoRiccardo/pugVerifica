@@ -8,5 +8,12 @@ html(lang="en")
     body
         header
             h1 Album di Animali
+            nav
+                ul  
+                    li 
+                        a(href="/") Home
+                    each animal in animaled
+                        li
+                            a(href=`/api/${animal.id_figurina}`) #{animal.razza_animale}
         main
             p Qua guardiamo gli animali
